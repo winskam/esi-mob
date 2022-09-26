@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Place2Rate</string>
+    <string name="enter_email">E-mail :</string>
+    <string name="connexion">Login</string>
+    <string name="name">Marika Winska</string>
+    <string name="matricule">55047</string>
+    <string name="about">About</string>
+    <string name="timeToExplore">Time To Explore &amp; Rate !</string>
+    <string name="login_button_text">Login</string>
+    <string name="logout_button_text">Logout</string>
+    <string name="home">Home</string>
+    <string name="places">Places</string>
+    <string name="explore">Explore</string>
+    <string name="earth_image">Earth image</string>
+    <string name="add_place">Add a place</string>
+    <string name="place_name">Name</string>
+    <string name="add">Add</string>
+    <string name="close">Close</string>
+    <string name="place_icon">Place icon</string>
+    <string name="item_divider">-</string>
+    <string name="place_image_description">Place image</string>
+    <string name="add_review_text">Add a review</string>
+    <string name="comment">Add a comment</string>
+    <string name="submit_btn">Submit</string>
+    <string name="add_image_btn">Button to add an image</string>
+    <string name="add_review_btn">Button to add a review</string>
+    <string name="search_bar_icon">Search bar icon</string>
+    <string name="connected">Connected</string>
+    <string name="no_connection">No connection</string>
+
+    <string-array name="Categories">
+        <item>Restaurant</item>
+        <item>Museum</item>
+        <item>Monument</item>
+        <item>Park</item>
+        <item>School</item>
+        <item>Other</item>
+    </string-array>
+
+</resources>

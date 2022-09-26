@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="place"
+            type="mobg5.g55047.projet.model.Place" />
+
+        <variable
+            name="placeDetailsViewModel"
+            type="mobg5.g55047.projet.screens.place.details.PlaceDetailsViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/place_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.smarteist.autoimageslider.SliderView
+                android:id="@+id/place_image_details"
+                android:layout_width="145dp"
+                android:layout_height="231dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_toEndOf="@+id/place_num_ratings_details"
+                tools:src="@drawable/earth" />
+
+            <ImageView
+                android:id="@+id/place_details_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:onClick="@{()->placeDetailsViewModel.onClose()}"
+                app:srcCompat="@drawable/close_icon" />
+
+            <TextView
+                android:id="@+id/place_name_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_toEndOf="@+id/place_details_close"
+                android:maxWidth="125dp"
+                android:minWidth="125dp"
+                android:textAlignment="center"
+                android:textColor="@color/green"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:placeNameString="@{placeDetailsViewModel.place}" />
+
+            <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                android:id="@+id/place_rating_details"
+                style="@style/Widget.MaterialRatingBar.RatingBar"
+                android:layout_width="125dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/place_name_details"
+                android:layout_alignStart="@+id/place_name_details"
+                android:layout_marginTop="10dp"
+                android:isIndicator="true"
+                app:mrb_progressTint="@color/green"
+                app:mrb_secondaryProgressTint="@color/white"
+                app:placeRating="@{placeDetailsViewModel.place}" />
+
+            <TextView
+                android:id="@+id/place_num_ratings_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="28dp"
+                android:layout_alignTop="@+id/place_rating_details"
+                android:layout_alignBottom="@+id/place_rating_details"
+                android:layout_marginStart="4dp"
+                android:layout_toEndOf="@+id/place_rating_details"
+                android:gravity="center"
+                android:textColor="@color/black"
+                app:ratingCount="@{placeDetailsViewModel.place}" />
+
+            <TextView
+                android:id="@+id/place_category_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/place_rating_details"
+                android:layout_alignStart="@+id/place_name_details"
+                android:layout_marginTop="10dp"
+                android:minWidth="125dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textStyle="italic"
+                app:placeCategoryString="@{placeDetailsViewModel.place}" />
+
+            <TextView
+                android:id="@+id/place_city_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/place_category_details"
+                android:layout_alignStart="@+id/place_name_details"
+                android:layout_marginTop="10dp"
+                android:maxWidth="125dp"
+                android:minWidth="125dp"
+                android:text="@{placeDetailsViewModel.completeAdress}"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/add_rating_dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/place_city_details"
+                android:layout_alignStart="@+id/place_name_details"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/add_review_btn"
+                android:enabled="@{placeDetailsViewModel.visible}"
+                app:srcCompat="@drawable/comment_icon" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/add_image_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/add_rating_dialog"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/add_rating_dialog"
+                android:clickable="true"
+                android:contentDescription="@string/add_image_btn"
+                android:enabled="@{placeDetailsViewModel.visible}"
+                android:focusable="true"
+                app:srcCompat="@drawable/photo_icon" />
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_ratings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/place_description"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0dp"
+            android:background="@color/white"
+            android:paddingTop="28dp"
+            android:paddingBottom="16dp" />
+
+    </RelativeLayout>
+
+</layout>

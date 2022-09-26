@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "313206562147",
+    "firebase_url": "https://place2rate-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "place2rate",
+    "storage_bucket": "place2rate.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:313206562147:android:eae7df18783a0ef26a4756",
+        "android_client_info": {
+          "package_name": "mobg5.g55047.projet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "313206562147-paiidpnb67arqsbbltii2d98silc99fi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnDoNTuH-v1mkN5Uy4LKIZ4JdLTENsjdw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "313206562147-paiidpnb67arqsbbltii2d98silc99fi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

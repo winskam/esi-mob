@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/mar-w/Documents/ESI/BAC3/MOBG5/Projet/app/src/main/res/layout/activity_main.xml" value="0.20425724637681159" />
+        <entry key="..\:/Users/mar-w/Documents/ESI/BAC3/MOBG5/Projet/app/src/main/res/layout/fragment_about_me.xml" value="0.4" />
+        <entry key="..\:/Users/mar-w/Documents/ESI/BAC3/MOBG5/Projet/app/src/main/res/layout/fragment_connexion.xml" value="0.264" />
+        <entry key="..\:/Users/mar-w/Documents/ESI/BAC3/MOBG5/Projet/app/src/main/res/menu/navdrawer_menu.xml" value="0.371875" />
+        <entry key="app/src/main/res/drawable-anydpi/about.xml" value="0.2851851851851852" />
+        <entry key="app/src/main/res/drawable-anydpi/addPlace.xml" value="0.262719298245614" />
+        <entry key="app/src/main/res/drawable-anydpi/add_place.xml" value="0.3394736842105263" />
+        <entry key="app/src/main/res/drawable-anydpi/close_icon.xml" value="0.3394736842105263" />
+        <entry key="app/src/main/res/drawable-anydpi/comment_icon.xml" value="0.3394736842105263" />
+        <entry key="app/src/main/res/drawable-anydpi/home.xml" value="0.2851851851851852" />
+        <entry key="app/src/main/res/drawable-anydpi/locate_button.xml" value="0.3394736842105263" />
+        <entry key="app/src/main/res/drawable-anydpi/login.xml" value="0.2851851851851852" />
+        <entry key="app/src/main/res/drawable-anydpi/monument.xml" value="0.3394736842105263" />
+        <entry key="app/src/main/res/drawable-anydpi/museum.xml" value="0.3394736842105263" />
+        <entry key="app/src/main/res/drawable-anydpi/other.xml" value="0.3394736842105263" />
+        <entry key="app/src/main/res/drawable-anydpi/park.xml" value="0.3394736842105263" />
+        <entry key="app/src/main/res/drawable-anydpi/photo_icon.xml" value="0.3394736842105263" />
+        <entry key="app/src/main/res/drawable-anydpi/place.xml" value="0.2851851851851852" />
+        <entry key="app/src/main/res/drawable-anydpi/place_icon.xml" value="0.3394736842105263" />
+        <entry key="app/src/main/res/drawable-anydpi/restaurant.xml" value="0.3394736842105263" />
+        <entry key="app/src/main/res/drawable-anydpi/school.xml" value="0.3394736842105263" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.19722222222222222" />
+        <entry key="app/src/main/res/drawable/back.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.19722222222222222" />
+        <entry key="app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/rounded_corner.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/rounded_corner_green.xml" value="0.3394736842105263" />
+        <entry key="app/src/main/res/drawable/rounded_corner_grey.xml" value="0.24978354978354977" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/dialog_rating.xml" value="0.22456140350877193" />
+        <entry key="app/src/main/res/layout/fragment_about_me.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_connection.xml" value="0.15217391304347827" />
+        <entry key="app/src/main/res/layout/fragment_connexion.xml" value="0.18819655521783182" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.26330532212885155" />
+        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.11764705882352941" />
+        <entry key="app/src/main/res/layout/fragment_place.xml" value="0.37894736842105264" />
+        <entry key="app/src/main/res/layout/fragment_place_creation.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_place_details.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/fragment_rating.xml" value="0.32587719298245615" />
+        <entry key="app/src/main/res/layout/image_holder.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/list_item_place.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/list_item_rating.xml" value="0.33" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

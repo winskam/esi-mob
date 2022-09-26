@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="mobg5.g55047.projet.screens.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_placeFragment"
+            app:destination="@id/placeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/placeFragment"
+        android:name="mobg5.g55047.projet.screens.place.PlaceFragment"
+        android:label="Places"
+        tools:layout="@layout/fragment_place">
+        <action
+            android:id="@+id/action_placeFragment_to_placeCreateFragment"
+            app:destination="@id/placeCreateFragment" />
+        <action
+            android:id="@+id/action_placeFragment_to_placeDetailsFragment"
+            app:destination="@id/placeDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/aboutMeFragment"
+        android:name="mobg5.g55047.projet.screens.aboutme.AboutMeFragment"
+        android:label="@string/about"
+        tools:layout="@layout/fragment_about_me" />
+
+    <fragment
+        android:id="@+id/placeCreateFragment"
+        android:name="mobg5.g55047.projet.screens.place.create.PlaceCreateFragment"
+        android:label="Create a place"
+        tools:layout="@layout/fragment_place_creation">
+        <action
+            android:id="@+id/action_placeCreateFragment_to_placeFragment"
+            app:destination="@id/placeFragment"
+            app:popUpTo="@id/placeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/placeDetailsFragment"
+        android:name="mobg5.g55047.projet.screens.place.details.PlaceDetailsFragment"
+        android:label="Place details">
+        <action
+            android:id="@+id/action_placeDetailsFragment_to_placeFragment"
+            app:destination="@id/placeFragment" />
+        <argument
+            android:name="placeId"
+            app:argType="string" />
+    </fragment>
+
+</navigation>

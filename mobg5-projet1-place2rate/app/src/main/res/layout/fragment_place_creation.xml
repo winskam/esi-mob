@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="placeCreateViewModel"
+            type="mobg5.g55047.projet.screens.place.create.PlaceCreateViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/label_create"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/add_place"
+            android:textSize="34sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/place_icon"
+            android:layout_width="60dp"
+            android:layout_height="45dp"
+            android:contentDescription="@string/place_icon"
+            app:layout_constraintStart_toEndOf="@+id/label_create"
+            app:layout_constraintTop_toTopOf="@+id/label_create"
+            app:srcCompat="@drawable/place_icon"
+            tools:ignore="VectorDrawableCompat" />
+
+        <EditText
+            android:id="@+id/name_place"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:hint="@string/place_name"
+            android:imeOptions="actionDone"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:text="@={placeCreateViewModel.placeName}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_create"
+            tools:ignore="TextContrastCheck" />
+
+        <Spinner
+            android:id="@+id/category_choice"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name_place" />
+
+        <TextView
+            android:id="@+id/city_text"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:text="@={placeCreateViewModel.address}"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/category_choice" />
+
+        <ImageButton
+            android:id="@+id/add_localisation_btn"
+            android:layout_width="89dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="@color/green"
+            android:src="@drawable/locate_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/city_text" />
+
+        <Button
+            android:id="@+id/add_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:onClick="@{() -> placeCreateViewModel.onAdd()}"
+            android:text="@string/add"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_localisation_btn"
+            tools:ignore="TextContrastCheck" />
+
+        <Button
+            android:id="@+id/close_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:onClick="@{() -> placeCreateViewModel.onClose()}"
+            android:text="@string/close"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_btn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

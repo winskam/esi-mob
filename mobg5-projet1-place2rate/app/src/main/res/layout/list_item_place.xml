@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="place"
+            type="mobg5.g55047.projet.model.Place" />
+
+        <variable
+            name="clickListener"
+            type="mobg5.g55047.projet.screens.place.PlaceListener" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{()->clickListener.onClick(place)}"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/place_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:contentDescription="@string/place_image_description"
+            android:scaleType="centerCrop"
+            app:placeImage='@{place}' />
+
+        <TextView
+            android:id="@+id/place_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/place_image"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="4dp"
+            android:layout_toEndOf="@+id/place_image"
+            android:textColor="@color/green"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:placeNameString='@{place}' />
+
+        <me.zhanghai.android.materialratingbar.MaterialRatingBar
+            android:id="@+id/place_rating"
+            style="@style/Widget.MaterialRatingBar.RatingBar.Indicator.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/place_name"
+            android:layout_alignStart="@+id/place_name"
+            android:layout_marginBottom="4dp"
+            app:placeRating='@{place}' />
+
+        <TextView
+            android:id="@+id/place_ratings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/place_rating"
+            android:layout_alignBottom="@+id/place_rating"
+            android:layout_marginStart="4dp"
+            android:layout_toEndOf="@+id/place_rating"
+            android:textColor="@color/black"
+            app:ratingCount='@{place}' />
+
+        <TextView
+            android:id="@+id/place_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/place_rating"
+            android:layout_alignStart="@+id/place_name"
+            android:textColor="@color/black"
+            android:textStyle="italic"
+            app:placeCategoryString="@{place}" />
+
+        <TextView
+            android:id="@+id/place_city_divider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/place_category"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_toEndOf="@+id/place_category"
+            android:text="@string/item_divider" />
+
+        <TextView
+            android:id="@+id/place_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/place_category"
+            android:layout_toEndOf="@+id/place_city_divider"
+            android:textColor="@color/black"
+            app:placeCityString="@{place}" />
+
+    </RelativeLayout>
+
+</layout>
